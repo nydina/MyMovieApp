@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BB72900428DB5F9C008DF59F /* AddToFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB72900328DB5F9C008DF59F /* AddToFavorite.swift */; };
-		BB72900628DC5D32008DF59F /* SearchForMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB72900528DC5D32008DF59F /* SearchForMovie.swift */; };
 		BB72900828DC8196008DF59F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB72900728DC8196008DF59F /* User.swift */; };
 		BB72900C28DC84C9008DF59F /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB72900B28DC84C9008DF59F /* UserDetail.swift */; };
 		BB72900E28DC852A008DF59F /* UserThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB72900D28DC852A008DF59F /* UserThumbnail.swift */; };
@@ -26,7 +25,6 @@
 
 /* Begin PBXFileReference section */
 		BB72900328DB5F9C008DF59F /* AddToFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavorite.swift; sourceTree = "<group>"; };
-		BB72900528DC5D32008DF59F /* SearchForMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForMovie.swift; sourceTree = "<group>"; };
 		BB72900728DC8196008DF59F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BB72900B28DC84C9008DF59F /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		BB72900D28DC852A008DF59F /* UserThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThumbnail.swift; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 				BBD80CA428DB081D00452151 /* AddMovieForm.swift */,
 				BBD80CA628DB2FA100452151 /* AddMovieButton.swift */,
 				BB72900328DB5F9C008DF59F /* AddToFavorite.swift */,
-				BB72900528DC5D32008DF59F /* SearchForMovie.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -206,7 +203,6 @@
 				BBD80C9B28D9B14700452151 /* MovieDetail.swift in Sources */,
 				BB72900C28DC84C9008DF59F /* UserDetail.swift in Sources */,
 				BBD80C9F28D9C57000452151 /* MovieRow.swift in Sources */,
-				BB72900628DC5D32008DF59F /* SearchForMovie.swift in Sources */,
 				BBD80CA328D9F64000452151 /* Movie.swift in Sources */,
 				BBD80C8F28D9B11E00452151 /* ContentView.swift in Sources */,
 				BBD80CA728DB2FA100452151 /* AddMovieButton.swift in Sources */,
