@@ -14,9 +14,7 @@ struct MovieList: View {
     var body: some View {
         NavigationView {
             List(searchResults) { movie in
-                
                 MovieRow(movie: movie)
-                
             }
             .searchable(text: $searchText, placement:  .navigationBarDrawer(displayMode: .always),
                         prompt: "Titre de film")
@@ -24,7 +22,6 @@ struct MovieList: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: AddMovieButton(updatedMovies: $updatedMovies))
         }
-        
     }
     
     var searchResults: [Movie] {

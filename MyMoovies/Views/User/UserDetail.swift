@@ -23,7 +23,9 @@ struct UserDetail: View {
                             
                         }
                     }
-                    
+                    Section("Films préférés") {
+                        Text("Film")
+                    }
                 }
                 
                 

@@ -14,6 +14,7 @@ struct AddMovieForm: View {
     @State private var description: String = ""
     @Binding var updatedMovies: [Movie]
     @State var selectedType: MovieType = .Action
+    @State var isFavorite: Bool = false
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -64,7 +65,7 @@ struct AddMovieForm: View {
             
     }
     func saveMovie() {
-        updatedMovies.append(Movie(title: title, year: Int(year) ?? 0, imageName: "Infiltres", description: description, director: director, type: selectedType))
+        updatedMovies.append(Movie(title: title, year: Int(year) ?? 0, imageName: "Infiltres", description: description, director: director, type: selectedType, isFavorite: isFavorite))
     }
 }
 

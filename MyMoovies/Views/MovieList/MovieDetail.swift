@@ -35,7 +35,7 @@ struct MovieDetail: View {
                 .padding()
                 Spacer()
             }
-            .navigationBarItems(trailing: AddToFavorite())
+                .navigationBarItems(trailing: AddToFavorite())
         }
     }
 }
