@@ -24,6 +24,7 @@ struct MovieDetail: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit
                     )
+                    .cornerRadius(30)
                     .padding()
                 Text(movie.type.rawValue)
                     .italic()
