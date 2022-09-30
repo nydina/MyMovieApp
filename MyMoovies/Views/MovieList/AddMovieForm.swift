@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct AddMovieForm: View {
+    @EnvironmentObject var movies: MovieViewModel
+    @Environment(\.presentationMode) var presentationMode
+    
     @State private var title: String = ""
     @State private var director: String = ""
     @State private var year: String = ""
     @State private var description: String = ""
-    @Binding var updatedMovies: [Movie]
     @State var selectedType: MovieType = .Action
     @State var isFavorite: Bool = false
-    @Environment(\.presentationMode) var presentationMode
+    
     
     var body: some View {
         NavigationView {
@@ -42,9 +44,7 @@ struct AddMovieForm: View {
                         }
                         .pickerStyle(.menu)
                     }
-                    
-                    
-                    
+
                 }
                 .navigationTitle("Ajouter un film")
                 .navigationBarTitleDisplayMode(.inline)
@@ -56,22 +56,19 @@ struct AddMovieForm: View {
                     }
                 }
                 Button("Sauvegarder") {
-                    saveMovie()
+                    movies.movies.append(Movie(title: title, year: Int(year) ?? 0, imageName: "Infiltres", description: description, director: director, type: selectedType, isFavorite: isFavorite))
                     presentationMode.wrappedValue.dismiss()
                 }
-                
             }
         }
-            
     }
-    func saveMovie() {
-        updatedMovies.append(Movie(title: title, year: Int(year) ?? 0, imageName: "Infiltres", description: description, director: director, type: selectedType, isFavorite: isFavorite))
-    }
+    
 }
+
 
 struct AddMovie_Previews: PreviewProvider {
     static var previews: some View {
-        AddMovieForm(updatedMovies: .constant([.preview]))
+        AddMovieForm()
     }
 }
 

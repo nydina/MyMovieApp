@@ -106,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				BBD80C8C28D9B11E00452151 /* MyMooviesApp.swift */,
-				BBD80CA028D9F5F600452151 /* Views */,
 				BB2AB5FF28E5E45100168951 /* Model */,
+				BBD80CA028D9F5F600452151 /* Views */,
 				BBD80CA128D9F60A00452151 /* ViewModel */,
 				BBD80C9028D9B12100452151 /* Assets.xcassets */,
 				BBD80C9228D9B12100452151 /* Preview Content */,
