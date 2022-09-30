@@ -15,7 +15,7 @@ struct ContentView: View {
                     Image(systemName: "film.circle.fill")
                     Text("Film")
                 }
-            Text("Another Tab")
+            UserDetail()
                 .tabItem {
                     Image(systemName: "person.circle.fill")
                     Text("Profil")
