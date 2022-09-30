@@ -8,35 +8,28 @@
 import SwiftUI
 
 struct AddMovieFormView: View {
-    @EnvironmentObject var movies: MovieViewModel
+    @EnvironmentObject var viewModel: MovieViewModel
     @Environment(\.presentationMode) var presentationMode
-    
-    @State private var title: String = ""
-    @State private var director: String = ""
-    @State private var year: String = ""
-    @State private var description: String = ""
-    @State var selectedType: MovieType = .Action
-    @State var isFavorite: Bool = false
-    
+
     
     var body: some View {
         NavigationView {
             VStack {
                 Form {
                     Section("Caracteristiques") {
-                        TextField("Titre du film", text: $title)
-                        TextField("Réalisateur", text: $director)
-                        TextField("Année de sortie", text: $year)
+                        TextField("Titre du film", text: $viewModel.title)
+                        TextField("Réalisateur", text: $viewModel.director)
+                        TextField("Année de sortie", text: $viewModel.year)
                     }
                     
                     Section("Synopsis") {
-                        TextField("Pitch", text: $description)
+                        TextField("Pitch", text: $viewModel.description)
                             .frame(height: 150, alignment: .top)
                         
                     }
                     
                     Section("Genre") {
-                        Picker("Genre", selection: $selectedType) {
+                        Picker("Genre", selection: $viewModel.selectedType) {
                             ForEach(MovieType.allCases, id: \.self) {
                                 Text($0.rawValue)
                             }
@@ -56,7 +49,7 @@ struct AddMovieFormView: View {
                     }
                 }
                 Button("Sauvegarder") {
-                    movies.movies.append(Movie(title: title, year: Int(year) ?? 0, imageName: "Infiltres", description: description, director: director, type: selectedType, isFavorite: isFavorite))
+                    viewModel.addMovie()
                     presentationMode.wrappedValue.dismiss()
                 }
             }
