@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct MovieRow: View {
+struct MovieRowView: View {
     let movie: Movie
     
     var body: some View {
-        NavigationLink(destination: MovieDetail(movie: movie)) {
+        NavigationLink(destination: MovieDetailView(movie: movie)) {
             HStack {
                 Image(systemName: "film")
                     .foregroundColor(.red)
@@ -29,7 +29,7 @@ struct MovieRow: View {
     
 }
 
-struct MovieRow_Previews: PreviewProvider {
+struct MovieRowView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieRow(movie: .preview)    }
+        MovieRowView(movie: .preview)    }
 }

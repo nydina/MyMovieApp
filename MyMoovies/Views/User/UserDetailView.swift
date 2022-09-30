@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct UserDetail: View {
+struct UserDetailView: View {
     var body: some View {
         NavigationView {
             VStack{
-                UserThumbnail()
+                UserThumbnailView()
                 Text("@" + user.name)
                     .font(.largeTitle)
                 Text(user.description)
@@ -36,8 +36,8 @@ struct UserDetail: View {
     }
 }
 
-struct UserDetail_Previews: PreviewProvider {
+struct UserDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        UserDetail()
+        UserDetailView()
     }
 }

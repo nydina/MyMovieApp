@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct AddMovieButton: View {
+struct AddMovieButtonView: View {
     @EnvironmentObject var movies: MovieViewModel
     @State private var showingAddMovie = false
-//    @Binding var updatedMovies: [Movie]
+
     var body: some View {
         Button {
             showingAddMovie = true
@@ -18,14 +18,14 @@ struct AddMovieButton: View {
             Image(systemName: "plus.circle.fill")
         }
         .sheet(isPresented: $showingAddMovie) {
-            AddMovieForm()
+            AddMovieFormView()
         }
         
     }
 }
 
-struct AddMovieButton_Previews: PreviewProvider {
+struct AddMovieButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        AddMovieButton()
+        AddMovieButtonView()
     }
 }

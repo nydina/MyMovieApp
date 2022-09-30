@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UserThumbnail: View {
+struct UserThumbnailView: View {
     var body: some View {
         Image("helen")
             .resizable()
@@ -21,8 +21,8 @@ struct UserThumbnail: View {
     }
 }
 
-struct UserThumbnail_Previews: PreviewProvider {
+struct UserThumbnailView_Previews: PreviewProvider {
     static var previews: some View {
-        UserThumbnail()
+        UserThumbnailView()
     }
 }

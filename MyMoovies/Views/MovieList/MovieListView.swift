@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct MovieList: View {
+struct MovieListView: View {
     @EnvironmentObject var movies: MovieViewModel
     @State private var searchText = ""
     
     var body: some View {
         NavigationView {
                 List(searchResults) { movie in
-                    MovieRow(movie: movie)
+                    MovieRowView(movie: movie)
                 }
                 .searchable(text: $searchText, placement:  .navigationBarDrawer(displayMode: .always),
                             prompt: "Titre de film")
                 .navigationTitle("Movies")
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(trailing: AddMovieButton())
+                .navigationBarItems(trailing: AddMovieButtonView())
             }
     }
     
@@ -33,8 +33,8 @@ struct MovieList: View {
     }
 }
 
-struct MovieList_Previews: PreviewProvider {
+struct MovieListView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieList()
+        MovieListView()
     }
 }

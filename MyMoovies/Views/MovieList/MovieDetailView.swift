@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MovieDetail: View {
+struct MovieDetailView: View {
     let movie: Movie
     var body: some View {
             VStack {
@@ -36,15 +36,15 @@ struct MovieDetail: View {
                 .padding()
                 Spacer()
             }
-                .navigationBarItems(trailing: AddToFavorite())
+                .navigationBarItems(trailing: AddToFavoriteView())
         }
     }
 }
 
-struct MovieDetail_Previews: PreviewProvider {
+struct MovieDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            MovieDetail(movie: .preview)
+            MovieDetailView(movie: .preview)
                 .previewInterfaceOrientation(.portraitUpsideDown)
         }
     }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddToFavorite: View {
+struct AddToFavoriteView: View {
     @State private var isFavorite: Bool = true
     var body: some View {
         Button {

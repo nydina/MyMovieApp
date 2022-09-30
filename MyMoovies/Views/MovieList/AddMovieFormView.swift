@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddMovieForm: View {
+struct AddMovieFormView: View {
     @EnvironmentObject var movies: MovieViewModel
     @Environment(\.presentationMode) var presentationMode
     
@@ -66,9 +66,9 @@ struct AddMovieForm: View {
 }
 
 
-struct AddMovie_Previews: PreviewProvider {
+struct AddMovieFormView_Previews: PreviewProvider {
     static var previews: some View {
-        AddMovieForm()
+        AddMovieFormView()
     }
 }
 
