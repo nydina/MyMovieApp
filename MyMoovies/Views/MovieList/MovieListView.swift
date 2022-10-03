@@ -9,14 +9,13 @@ import SwiftUI
 
 struct MovieListView: View {
     @EnvironmentObject var movies: MovieViewModel
-    @State private var searchText = ""
     
     var body: some View {
         NavigationView {
-                List(searchResults) { movie in
+            List(movies.searchResults) { movie in
                     MovieRowView(movie: movie)
                 }
-                .searchable(text: $searchText, placement:  .navigationBarDrawer(displayMode: .always),
+                .searchable(text: $movies.searchText, placement:  .navigationBarDrawer(displayMode: .always),
                             prompt: "Titre de film")
                 .navigationTitle("Movies")
                 .navigationBarTitleDisplayMode(.inline)
@@ -24,13 +23,6 @@ struct MovieListView: View {
             }
     }
     
-    var searchResults: [Movie] {
-        if searchText.isEmpty {
-            return movies.movies
-        } else {
-            return movies.movies.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
-        }
-    }
 }
 
 struct MovieListView_Previews: PreviewProvider {

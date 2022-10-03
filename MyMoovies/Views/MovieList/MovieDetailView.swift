@@ -36,7 +36,7 @@ struct MovieDetailView: View {
                 .padding()
                 Spacer()
             }
-                .navigationBarItems(trailing: AddToFavoriteView())
+                .navigationBarItems(trailing: AddToFavoriteView(viewModel: MovieViewModel()))
         }
     }
 }

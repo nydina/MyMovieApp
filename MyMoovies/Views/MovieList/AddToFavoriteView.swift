@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct AddToFavoriteView: View {
-    @State private var isFavorite: Bool = true
+    @StateObject var viewModel: MovieViewModel
     var body: some View {
         Button {
-            isFavorite.toggle()
+            viewModel.isFavorite.toggle()
         } label: {
-            Image(systemName: isFavorite ? "heart.fill" : "heart")
+            Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
                 .font(.title)
         }
     }

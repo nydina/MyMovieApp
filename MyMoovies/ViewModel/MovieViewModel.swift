@@ -17,6 +17,15 @@ class MovieViewModel: ObservableObject {
     @Published var description: String = ""
     @Published var selectedType: MovieType = .Action
     @Published var isFavorite: Bool = false
+    @Published var searchText = ""
+    
+    var searchResults: [Movie] {
+        if searchText.isEmpty {
+            return movies
+        } else {
+            return movies.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
+        }
+    }
     
     init() {
             self.movies = [
@@ -27,7 +36,7 @@ class MovieViewModel: ObservableObject {
         }
     
     func addMovie() {
-        let newMovie = Movie(title: title, year: Int(year) ?? 0, imageName: "", description: description, director: director, type: selectedType, isFavorite: isFavorite)
+        let newMovie = Movie(title: title, year: Int(year) ?? 0, imageName: "template", description: description, director: director, type: selectedType, isFavorite: isFavorite)
         movies.append(newMovie)
     }
 }
